@@ -80,7 +80,12 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: address_api_production
-  username: address_api
-  password: <%= ENV['ADDRESS_API_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  username: uzlajxvyszloil
+  password: IMy4F0DkrGcq4d1f1u9Glgufnc
+  hostname: ec2-54-83-198-159.compute-1.amazonaws.com
+  pool: 5
+  port: 5432
+  url: postgres://uzlajxvyszloil:IMy4F0DkrGcq4d1f1u9Glgufnc@ec2-54-83-198-159.compute-1.amazonaws.com:5432/d1un47gf2hdtc3
+  database: d1un47gf2hdtc3
