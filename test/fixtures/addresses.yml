@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vendor_id: 1
+  type: 
+  lat: 1.5
+  lng: 1.5
+  wikipedia: MyText
+  iata: MyString
+  code: MyString
+
+two:
+  vendor_id: 1
+  type: 
+  lat: 1.5
+  lng: 1.5
+  wikipedia: MyText
+  iata: MyString
+  code: MyString
