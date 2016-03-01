@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+    <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+    <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+    
+<head>
+    <meta charset="utf-8">
+    <title>Your Site</title>
+    <meta name="author" content="ms mridha">
+
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- JQUERY -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/ddslick.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    
+     <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+      <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .controls {
+      margin-top: 10px;
+      border: 1px solid transparent;
+      border-radius: 2px 0 0 2px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      height: 32px;
+      outline: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+ 
+#pac-input
+{
+        width: 100%;
+    height: 38px;
+    margin-top: 6px;
+    background-color: #5B9BD5;
+    color: white;
+    border: none;
+    text-align: center;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+#pac-input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    white;
+}
+#pac-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    white;
+   opacity:  1;
+}
+#pac-input::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    white;
+   opacity:  1;
+}
+#pac-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    white;
+}
+#pac-input:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color:    white;
+}
+
+    .pac-container {
+      font-family: Roboto;
+    }
+
+    #type-selector {
+      color: #fff;
+      background-color: #4d90fe;
+      padding: 5px 11px 0px 11px;
+    }
+
+    #type-selector label {
+      font-family: Roboto;
+      font-size: 13px;
+      font-weight: 300;
+    }
+
+        </style>
+        <title>Places Searchbox</title>
+        <style>
+          #target {
+            width: 345px;
+          }
+    </style>
+
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    
+    <!-- SECTION-1 -->
+    <header>
+
+        <div class="container-fluid">
+            
+            <div class="row">
+                <img class="home" src="images/home-icon.png" alt="">
+                <ul class="list-inline main-menu">
+                    
+                    <li><a href=""><img src="images/air-icon.png" alt="">Airlines</a></li>
+                    <li><a href=""><img src="images/car_and_limo.png" alt="">Car & Limo</a></li>
+                    <li><a href=""><img src="images/clients.png" alt="">Clients</a></li>
+                    <li><a href="">contact</a></li>
+                    <li><a href=""><img src="images/documents.png" alt=""></i>Document</a></li>
+                    <li><a href=""><img src="images/hotel.png" alt=""> Hotel</a></li>
+                    <li><a href=""><img src="images/sales-icon.png" alt="">Sales</a></li>
+                    <li><a href=""><img src="images/wheel.png" alt="">Support/Ticktes</a></li>
+                    <li><a href=""> <img src="images/tools.png" alt="">Tools</a></li>
+                    <li><a href="">Vendor</a></li>
+
+                    <li class="align-right client"><a href="">Cristina</a></li>
+                </ul>
+                
+
+            </div><!-- end of row-->
+
+        </div><!-- end of container -->
+
+    </header>
+
+
+
+    <!-- SECTION-2  -->
+    <section>
+        
+        <div class="main-content">
+            
+            <div class="container-fluid">
+                
+                <div class="row">
+                   
+                   <div class="col-sm-2 side-bar-left">
+                           
+                        <h2 class="border-1 editable" contenteditable="true">Traveler</h2>
+                        <input id="pac-input" typr="text" placeholder="Destination">
+
+                        <ul class="list-inline">
+                            <li><img src="images/client.png" alt=""></li>
+                            <li><h1>Doe,<br> Jan Mary</h1></li>   
+                        </ul>
+
+                        <ul class="list-inline">
+
+                            <li><h3>Company Name</h3></li>
+                            <li class="align-right li-1"><h3 class="plus-cus-tr">+</h3></li>
+
+                        </ul>
+                         <div class="air-choice">
+                            
+                            <ul class="list-inline">
+                                <li><h3>Air Preferences</h3></li>
+                                <li class="align-right li-6"><h3 class="btn-minify">-</h3></li>
+                            
+                            </ul>
+                            <li>
+                                <p>Seating: Aisle Forward</p>
+                                <h4><a href="">Alaska</a></h4>
+                                <h4><a href="">American Airlines</a></h4>
+                                <h4><a href="">Delta Airlines</a></h4>
+                                <h4><a href="">United Airlines</a></h4>
+                                <h4><a href="">SouthWest Airlines</a></h4>
+                                <h4><a href="">Lufthansa</a></h4>
+                            </li>
+
+                        </div><!-- end of air choice -->
+
+                        <ul class="list-inline">
+                            <li><h3>Corp. Memberships</h3></li>
+                            <li class="align-right li-2"><h3 class="plus-cus-tr">+</h3></li>
+
+                        </ul>
+
+                         <div class="air-choice">
+                            
+                            <ul class="list-inline">
+                                <li><h3>Air Preferences</h3></li>
+                                <li class="align-right li-6"><h3>-</h3></li>
+                            
+                            </ul>
+                            <li>
+                                <p>Seating: Aisle Forward</p>
+                                <h4><a href="">Alaska</a></h4>
+                                <h4><a href="">American Airlines</a></h4>
+                                <h4><a href="">Delta Airlines</a></h4>
+                                <h4><a href="">United Airlines</a></h4>
+                                <h4><a href="">SouthWest Airlines</a></h4>
+                                <h4><a href="">Lufthansa</a></h4>
+                            </li>
+
+                        </div><!-- end of air choice -->
+
+                        <ul class="list-inline">
+                            <li><h3>Home Address</h3></li>
+                            <li class="align-right li-3"><h3 class="plus-cus-tr">+</h3></li>
+
+                        </ul>
+
+                        <ul class="list-inline">
+                            <li><h3>Payment Options</h3></li>
+                            <li class="align-right li-4"><h3 class="plus-cus-tr">+</h3></li>
+
+                        </ul>
+
+                        <ul class="list-inline">
+                            <li><h3>Travel Documents</h3></li>
+                            <li class="align-right li-5"><h3 class="plus-cus-tr">+</h3></li>
+
+                        </ul>
+
+                        <div class="air-choice">
+                            
+                            <ul class="list-inline">
+                                <li><h3>Air Preferences</h3></li>
+                                <li class="align-right li-6"><h3>-</h3></li>
+                            
+                            </ul>
+                            <li>
+                                <p>Seating: Aisle Forward</p>
+                                <h4><a href="">Alaska</a></h4>
+                                <h4><a href="">American Airlines</a></h4>
+                                <h4><a href="">Delta Airlines</a></h4>
+                                <h4><a href="">United Airlines</a></h4>
+                                <h4><a href="">SouthWest Airlines</a></h4>
+                                <h4><a href="">Lufthansa</a></h4>
+                            </li>
+
+                        </div><!-- end of air choice -->
+
+                        <ul class="list-inline">
+
+                            <li><h3>Hotel Choice &nbsp; </h3></li>
+                            <li class="align-right li-7"><h3 class="plus-cus-tr">+</h3></li>
+
+                        </ul>
+                        <div class="air-choice">
+                            
+                            <ul class="list-inline">
+                                <li><h3>Air Preferences</h3></li>
+                                <li class="align-right li-6"><h3>-</h3></li>
+                            
+                            </ul>
+                            <li>
+                                <p>Seating: Aisle Forward</p>
+                                <h4><a href="">Alaska</a></h4>
+                                <h4><a href="">American Airlines</a></h4>
+                                <h4><a href="">Delta Airlines</a></h4>
+                                <h4><a href="">United Airlines</a></h4>
+                                <h4><a href="">SouthWest Airlines</a></h4>
+                                <h4><a href="">Lufthansa</a></h4>
+                            </li>
+
+                        </div><!-- end of air choice -->
+
+                        <ul class="list-inline">
+
+                            <li><h3>Car Rental  &nbsp; </h3></li>
+                            <li class="align-right li-8"><h3 class="plus-cus-tr">+</h3></li>
+
+                        </ul>
+
+                         <div class="air-choice">
+                            
+                            <ul class="list-inline">
+                                <li><h3>Air Preferences</h3></li>
+                                <li class="align-right li-6"><h3>-</h3></li>
+                            
+                            </ul>
+                            <li>
+                                <p>Seating: Aisle Forward</p>
+                                <h4><a href="">Alaska</a></h4>
+                                <h4><a href="">American Airlines</a></h4>
+                                <h4><a href="">Delta Airlines</a></h4>
+                                <h4><a href="">United Airlines</a></h4>
+                                <h4><a href="">SouthWest Airlines</a></h4>
+                                <h4><a href="">Lufthansa</a></h4>
+                            </li>
+
+                        </div><!-- end of air choice -->
+
+                         <ul class="list-inline">
+
+                            <li><h3>Itineraries &nbsp;  </h3></li>
+                            <li class="align-right li-9"><h3 class="plus-cus-tr">+</h3></li>
+
+                        </ul>
+
+                         <ul class="list-inline">
+
+                            <li><h3>Unsued Tickets &nbsp;  </h3></li>
+                            <li class="align-right li-10"><h3 class="plus-cus-tr">+</h3></li>
+
+                        </ul>
+
+                         <ul class="list-inline">
+
+                            <li><h3>Waivers & Favors &nbsp;   </h3></li>
+                            <li class="align-right li-11"><h3 class="plus-cus-tr">+</h3></li>
+
+                        </ul>
+
+
+
+                   </div><!-- end of col-sm-2 -->
+
+
+
+                   <div class="col-sm-10 main-content-area">
+                       
+                      
+                           
+                           <div class="row main-content-input-sec">
+                               
+                              <div class="col-sm-8 pad-left-0">
+
+                                  <div class="row mar-20">
+                                    <form action="">
+                                      <div class="col-sm-4 pad-left-0">
+                                          <div class="input-group" >
+                                            <span class="input-group-addon"><img src="images/airplane.png" alt=""></span>
+                                          
+
+                                             <select name="select" class="form-control select-jq" id="from-1">
+                                                  <!-- <option value="1">Airelines</option> 
+                                                  <option value="2">Car & Limo</option>  -->
+                                                  <option>Departure</option>
+                                                  <option value="2" data-imagesrc="images/hotel.png" data-description="">Hotel Search</option>
+                                                  <option value="2" data-imagesrc="images/car_and_limo.png" data-description="">Car Search</option>
+                                             </select>
+                              
+                                          </div><!-- end of btn-group -->
+                                      </div><!-- end of col-sm-4 -->
+
+                                      <div class="col-sm-4 pad-left-0">
+                                          <div class="input-group" >
+                                            <span class="input-group-addon"><img src="images/airplane-2.png" alt=""></span>
+                                          
+
+                                             <select name="select" class="form-control select-jq" id="from-2">
+                                                  <!-- <option value="1">Airelines</option> 
+                                                  <option value="2">Car & Limo</option>  -->
+                                                  <option>Destination</option>
+                                                  <option value="2" data-imagesrc="images/hotel.png" data-description="">Hotel Search</option>
+                                                  <option value="2" data-imagesrc="images/car_and_limo.png" data-description="">Car Search</option>
+                                             </select>
+                              
+                                          </div><!-- end of btn-group -->
+                                      </div><!-- end of col-sm-4 -->
+
+                                      <div class="col-sm-4 pad-left-0">
+                                          <div class="input-group" >
+                                            <span class="input-group-addon"><img src="images/airplane-3.png" alt=""></span>
+                                          
+
+                                             <select name="select" class="form-control select-jq" id="from-3">
+                                                  <option value="1">Airelines</option> 
+                                                  <option value="2">Car & Limo</option> 
+                                             </select>
+                              
+                                          </div><!-- end of btn-group -->
+                                      </div><!-- end of col-sm-4 -->
+
+                                    </form>
+                                </div>
+                            
+                              </div><!-- end of col sm 8 -->
+
+
+                               
+
+                            </div><!-- end of row -->
+
+                          <div class="row input-fields-row">
+                               <form role="form">
+                                  <div class="col-sm-8 pad-left-0">
+                                    <div class="row mar-20">
+                                      <div class="col-sm-4 pad-left-0">
+                                        <input class="form-control txt-right" name="name" type="text" placeholder="1-4-2016">
+                                      </div>
+
+                                      <div class="col-sm-4 pad-left-0">
+                                        <input class="form-control txt-right" name="name" type="text" placeholder="1-4-2016">
+                                      </div>
+
+                                      <div class="col-sm-4 pad-left-0">
+                                        <input class="form-control txt-right" name="name" type="text" placeholder="1-4-2016">
+                                      </div>
+                                    </div>
+                                  </div>
+                              </form>
+                          </div><!-- end of row -->
+
+                       
+
+                       <div class="row">
+                           
+                           <div class="travel-state">
+                               
+                                <div class="col-sm-8 pad-left-0">
+                                  
+                                    <div class="row mar-20">
+                                         
+                                        <div class="col-sm-4">
+                                           
+                                            <div class="row green-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/123.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 green-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                             <div class="row green-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/123.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 green-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                            <div class="row green-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/123.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 green-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                    </div><!-- end or row -->
+
+                                    <div class="row mar-20">
+                                         
+                                        <div class="col-sm-4">
+                                           
+                                            <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/234.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                             <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/234.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                            <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/234.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                    </div><!-- end or row -->
+
+                                    <div class="row mar-20">
+                                         
+                                        <div class="col-sm-4">
+                                           <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/345.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+                                          
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                           <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/345.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                           <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/345.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                    </div><!-- end or row -->
+
+                                    <div class="row mar-20">
+                                         
+                                        <div class="col-sm-4">
+                                            <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/456.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                             <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/456.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                             <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/456.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                    </div><!-- end or row -->
+
+                                    <div class="row mar-20">
+                                         
+                                        <div class="col-sm-4">
+                                           
+                                            <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/567.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                            <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/567.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                           <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/567.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                    </div><!-- end or row -->
+
+                                    <div class="row mar-20">
+                                         
+                                        <div class="col-sm-4">
+                                           
+                                           <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/678.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                            <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/678.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                            <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/678.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                    </div><!-- end or row -->
+
+                                    <div class="row mar-20">
+                                         
+                                        <div class="col-sm-4">
+                                           
+                                           <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/789.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                           
+                                           <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/789.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                           
+                                           <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/789.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                    </div><!-- end or row -->
+
+                                    <div class="row mar-20">
+                                         
+                                        <div class="col-sm-4">
+                                           
+                                           
+                                           <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/789.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                           
+                                           <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/789.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                          
+                                           <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/789.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                    </div><!-- end or row -->
+
+                                    <div class="row mar-20">
+                                         
+                                        <div class="col-sm-4">
+                                           
+                                           
+                                           <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/789.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                            
+                                           <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/789.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                        <div class="col-sm-4">
+                                            
+                                          
+                                           <div class="row red-price">
+                                                
+                                               <div class="col-xs-4">
+                                                   <img src="images/789.png" alt="">
+                                               </div> 
+
+                                               <div class="col-xs-4">
+                                                   <p>6:01AM</p>
+                                               </div>
+
+                                               <div class="col-xs-4 red-r">
+                                                 <p>$123</p>
+                                               </div>
+
+                                            </div><!-- end of row -->
+
+                                        </div><!-- end of col 4 -->
+
+                                    </div><!-- end or row -->
+
+                                </div><!-- end of col 8 -->
+
+                                <div class="col-sm-4">
+                                    <div id="map" style="height: 315px; margin-top: 10px;"></div>
+                                </div><!-- end of col 4 -->
+
+                            </div><!-- end of row -->
+
+                        </div><!-- end of travel state -->
+
+                    </div><!-- end of col sm 10 -->
+
+                </div><!-- end of row -->
+
+            </div><!-- end of container -->
+
+        </div><!-- end of main content -->
+
+    </section>
+ <script>
+     
+  $(document).ready(function(){
+    $('#from-1').ddslick();
+    $('#from-2').ddslick();
+    $('#from-3').ddslick();
+      
+
+    
+      
+      initAutocomplete();
+    });
+     
+    $('.plus-cus-tr').click(function(){
+        $(this).parent().parent().next('.air-choice').toggle();
+    });
+
+    //get selected option val
+        $('.select-jq').click(function(){
+            var curObj = $(this);
+            var val = curObj.val();
+
+            var parentDivCs = curObj.parent();
+            if ( val === '2') {
+
+                parentDivCs.find('img').attr('src','images/car_and_limo.png');
+
+            } else {
+                parentDivCs.find('img').attr('src','images/airplane.png');
+            }
+        });
+
+        //minify button
+            $('.btn-minify').click(function(){
+                var btnText = $(this).text();
+
+                if( btnText === '-') {
+                    $(this).html('+');
+                } else {
+                    $(this).html('-');
+                }
+            $(this).parent().parent().next().toggle();
+        });
+        
+        //get the window heigh
+        var docHeight = $(window).height();
+
+        var minusH = $('header').height();
+
+        height = docHeight - minusH;
+
+
+       $('.side-bar-left').css('height', height);
+
+        var map;
+     
+function initAutocomplete() {
+   map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -33.8688, lng: 151.2195},
+    zoom: 13,
+    mapTypeControl: false,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  // Create the search box and link it to the UI element.
+  var input = document.getElementById('pac-input');
+  var searchBox = new google.maps.places.SearchBox(input);
+
+  // Bias the SearchBox results towards current map's viewport.
+  map.addListener('bounds_changed', function() {
+    searchBox.setBounds(map.getBounds());
+  });
+
+  var markers = [];
+  // [START region_getplaces]
+  // Listen for the event fired when the user selects a prediction and retrieve
+  // more details for that place.
+  searchBox.addListener('places_changed', function() {
+    var places = searchBox.getPlaces();
+
+    if (places.length == 0) {
+      return;
+    }
+
+    // Clear out the old markers.
+    markers.forEach(function(marker) {
+      marker.setMap(null);
+    });
+    markers = [];
+
+    // For each place, get the icon, name and location.
+    var bounds = new google.maps.LatLngBounds();
+    places.forEach(function(place) {
+      var icon = {
+        url: place.icon,
+        size: new google.maps.Size(71, 71),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(17, 34),
+        scaledSize: new google.maps.Size(25, 25)
+      };
+
+      // Create a marker for each place.
+      markers.push(new google.maps.Marker({
+        map: map,
+        title: place.name,
+        position: place.geometry.location
+      }));
+        $.getJSON('https://ameer-api.herokuapp.com/near.json/?lat='+place.geometry.location.lat()+'&lng='+place.geometry.location.lng(), { get_param: 'value' }, function(data) {
+    
+  var myLatLng = {lat: data.lat, lng: data.lng};
+    console.log(data);
+    
+    var img_sel = new google.maps.MarkerImage('p.png');
+  var marker = new google.maps.Marker({
+    map: map,
+        icon: img_sel,
+    position: myLatLng
+  });
+             markers.push(marker);
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.setContent(data.wikipedia);
+    infowindow.open(map, this);
+  });
+    
+      //  bounds.extend(myLatLng);
+    map.fitBounds(bounds);
+    
+});
+
+      if (place.geometry.viewport) {
+        // Only geocodes have viewport.
+        bounds.union(place.geometry.viewport);
+      } else {
+        bounds.extend(place.geometry.location);
+      }
+    });
+        infowindow = new google.maps.InfoWindow();
+
+  var service = new google.maps.places.PlacesService(map);
+
+
+      
+  });
+  // [END region_getplaces]
+}
+
+
+function callback(results, status) {
+  if (status === google.maps.places.PlacesServiceStatus.OK) {
+      console.log(results);
+    for (var i = 0; i < results.length; i++) {
+      createMarker(results[i]);
+    }
+  }
+}
+
+function createMarker(place) {
+  var placeLoc = place.geometry.location;
+    
+    var img_sel = new google.maps.MarkerImage('p.png');
+  var marker = new google.maps.Marker({
+    map: map,
+        icon: img_sel,
+    position: place.geometry.location
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.setContent(place.name);
+    infowindow.open(map, this);
+  });
+}
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+/**
+|-----------------------------------------------------
+|  SECTION-2
+|-----------------------------------------------------
+*/
+.side-bar-left {
+  background: #5b9bd5;
+  text-align: center;
+}
+.side-bar-left h2 {
+  font-size: 24px;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+}

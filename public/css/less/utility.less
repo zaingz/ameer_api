@@ -1,0 +1,195 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 100%;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+	list-style-type: none;
+}
+
+input,
+textarea,
+select {
+	outline:none;
+}
+
+
+
+
+
+/***********************************************************************************************/
+/* UTILITY CLASSES */
+/***********************************************************************************************/
+.align-center {
+	text-align: center;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-right {
+
+    text-align: right;
+    margin-left: 27px;
+
+}
+
+.inline {
+
+	li {
+		display: inline-block;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+option,
+select{
+	background: #ffffff;
+	max-width: 100%;
+
+}
+
+select{
+	height: 38px;
+	font-size: 13px;
+}
+
+.btn-plane{
+	background: #ffffff;
+}
+
+.pad-left-0{
+	margin-left: 0px;
+}
+
+.red{
+	background: #FF0000;
+	height: 30px;
+	width: 56px;
+	padding-top: 11px;
+	padding-right: 0px;
+}
+
+
+
+.green{
+	background:#007300;
+	height: 30px;
+	width: 56px;
+	padding-top: 11px;
+	padding-right: 0px;
+}
+
+.mar-20{
+	margin:11px -36px 20px 15px;
+}
+
+.state-btm-border{
+	background:;
+	padding: 0px;
+	margin: 0px;
+	max-width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+	border-top: 2px solid #999999;
+	border-bottom: 3px solid #999999;
+	border-left: 3px solid #999999;
+	border-right: 3px solid #006600;
+	img{
+		padding-top: 0px;
+	}
+}
+
+.green-r{
+	height: 100%;
+	background: #006600;
+	color: @regular-text;
+}
+
+.green-price{
+	border-top: 2px solid #b3b3b3;
+	border-bottom: 4px solid  #b3b3b3;
+	border-top: 1px solid  #b3b3b3;
+	border-left: 3px solid  #b3b3b3;
+	border-radius: 1px 3px 5px 3px;
+	margin-right: 0px;
+
+	p{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    }
+}
+
+.red-r{;
+	height: 100%;
+    background: #fe0000;
+    color: @regular-text;
+}
+
+.red-price{
+	border-top: 2px solid #b3b3b3;
+	border-bottom: 4px solid  #b3b3b3;
+	border-top: 1px solid  #b3b3b3;
+	border-left: 3px solid  #b3b3b3;
+	border-radius: 1px 3px 5px 3px;
+	margin-right: 0px;
+
+	p{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    }
+}
