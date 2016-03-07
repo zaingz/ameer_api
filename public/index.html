@@ -992,6 +992,21 @@
 
                                 <div class="col-sm-4">
                                     <div id="map" style="height: 315px; margin-top: 10px;"></div>
+									<div id="map-info"style="margin-top: 10px;" >
+										<div id="final-dest" style="text-align:left; font-size:20px" >Final Des</div>
+										<div class="row">
+											<div id="via-tansport" class="col-md-1">
+											<a href=""><img src="car.png" width="25" height="25" alt=""></a>
+											</div>
+											<div id="route-detail" class="col-md-4" style="margin-top:7px">details here</div>
+											<div id="route-time" style="text-align:right; margin-right:20px;margin-top:7px">Time</div>
+											
+										</div>
+										<div class="row">
+											
+											<div id="route-duration" style="text-align:right; margin-right:20px;margin-top:7px">Duration</div>
+										</div>
+									</div>
                                 </div><!-- end of col 4 -->
 
                             </div><!-- end of row -->
@@ -1005,9 +1020,12 @@
             </div><!-- end of container -->
 
         </div><!-- end of main content -->
+		
 
     </section>
  <script>
+	var directionDisplay;
+    var directionsService = new google.maps.DirectionsService();
      
   $(document).ready(function(){
     $('#from-1').ddslick();
@@ -1064,6 +1082,7 @@
         var map;
      
 function initAutocomplete() {
+	directionsDisplay = new google.maps.DirectionsRenderer();
    map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -33.8688, lng: 151.2195},
     zoom: 13,
@@ -1118,6 +1137,87 @@ function initAutocomplete() {
     
   var myLatLng = {lat: data.lat, lng: data.lng};
     console.log(data);
+	console.log(data.lat);
+	//code For define rout between two points
+	var directionDisplay;
+	directionsDisplay.setMap(map);
+	calcRoute();
+	function calcRoute() {
+
+        var waypts = [];
+
+
+
+		var directionDisplay;
+		var directionsService = new google.maps.DirectionsService();
+        start  = new google.maps.LatLng(place.geometry.location.lat(), place.geometry.location.lng());
+        end = new google.maps.LatLng(data.lat, data.lng);
+        var request = {
+            origin: start,
+            destination: end,
+            waypoints: waypts,
+            optimizeWaypoints: true,
+            travelMode: google.maps.DirectionsTravelMode.DRIVING
+        };
+        directionsService.route(request, function(response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+			
+                directionsDisplay.setDirections(response);
+                var route = response.routes[0];
+				//console.log(response);
+				//console.log(response.routes[0].summary);
+				
+				document.getElementById("route-time").innerHTML=response.routes[0].legs[0].distance.text;
+				document.getElementById("route-duration").innerHTML=response.routes[0].legs[0].duration.text;
+				
+				document.getElementById("route-detail").innerHTML=response.routes[0].summary;
+				
+            }
+        });
+    }
+	
+	var geocoder = new google.maps.Geocoder;
+
+		latitude=data.lat;               
+		longitude=data.lng;
+		var latlng = {lat: latitude, lng: longitude};
+
+		geocoder.geocode({'location': latlng}, function(results, status) {
+			if (status === google.maps.GeocoderStatus.OK) {
+			  if (results[1]) {
+				var myPlaceId = results[1].place_id;
+				console.log(results[1].place_id);
+			  } else {
+				window.alert('No results found');
+			  }
+			} else {
+			  window.alert('Geocoder failed due to: ' + status);
+			}
+			
+			var infowindow = new google.maps.InfoWindow();
+			  var service = new google.maps.places.PlacesService(map);
+
+			  service.getDetails({
+				placeId: myPlaceId
+			  }, function(place, status) {
+				if (status === google.maps.places.PlacesServiceStatus.OK) {
+				  var marker = new google.maps.Marker({
+					map: map,
+					position: place.geometry.location
+				  });
+				  google.maps.event.addListener(marker, 'click', function() {
+				  
+					infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+					  'Place ID: ' + place.place_id + '<br>' +
+					  place.formatted_address + '</div>');
+					infowindow.open(map, this);
+				  });
+				  console.log(place.formatted_address);
+				  
+				  document.getElementById("final-dest").innerHTML=place.formatted_address;
+				}
+			  });
+		  });
     
     var img_sel = new google.maps.MarkerImage('p.png');
   var marker = new google.maps.Marker({
